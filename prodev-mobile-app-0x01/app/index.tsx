@@ -9,6 +9,9 @@ export default function Index() {
         <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>
         <Text style={styles.smallText}>ALX is awesome</Text>
         <Text style={styles.newText}>Expo Router simplifies navigation!</Text>
+        <Text style={styles.extraText1}>Expo Go is a great tool for development.</Text>
+        <Text style={styles.extraText2}>EAS makes building and submitting apps easy.</Text>
+        <Text style={styles.extraText3}>React Native is a powerful framework.</Text>
       </View>
     </View>
   );
@@ -57,6 +60,25 @@ const styles = StyleSheet.create({
     color: "#4caf50",
     marginTop: 10,
     fontStyle: "italic",
+    textAlign: "center",
+  },
+  extraText1: {
+    fontSize: 16,
+    color: "#ff9800",
+    marginTop: 15,
+    textAlign: "center",
+    fontWeight: "600",
+  },
+  extraText2: {
+    fontSize: 14,
+    color: "#795548",
+    marginTop: 15,
+    textAlign: "center",
+  },
+  extraText3: {
+    fontSize: 12,
+    color: "#607d8b",
+    marginTop: 15,
     textAlign: "center",
   },
 });
