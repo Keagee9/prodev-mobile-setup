@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image, ImageBackground, Dimensions, TouchableOpacity } from "react-native";
+import { Text, View, StyleSheet, Image, ImageBackground, TouchableOpacity } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -13,7 +13,7 @@ export default function Index() {
           <View style={styles.container}>
             <View>
               <View style={styles.companyLogo}>
-                <Image source={require("../assets/images/Logo.png")} />
+                <Image source={require("../assets/images/Logo.png")} style={styles.logo} />
               </View>
 
               <View style={styles.textGroup}>
@@ -55,6 +55,11 @@ const styles = StyleSheet.create({
     width: "100%",
     alignItems: "center",
     padding: 20,
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    resizeMode: "contain",
   },
   textGroup: {
     alignItems: "center",
