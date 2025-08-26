@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image, ImageBackground, TouchableOpacity } from "react-native";
+import { Dimensions, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function Index() {
@@ -43,6 +43,16 @@ export default function Index() {
   );
 }
 
+const baseButton = {
+  flex: 1,
+  borderWidth: 2,
+  borderColor: "white",
+  borderRadius: 40,
+  paddingVertical: 15,
+  paddingHorizontal: 5,
+  alignItems: "center",
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -78,25 +88,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   transparentButton: {
-    borderColor: "white",
-    borderWidth: 2,
-    borderRadius: 40,
-    paddingVertical: 15,
-    paddingHorizontal: 5,
-    alignItems: "center",
-    fontSize: 20,
-    flex: 1,
+    ...baseButton,
   },
   button: {
-    borderColor: "white",
-    borderWidth: 2,
-    borderRadius: 40,
-    paddingVertical: 15,
-    paddingHorizontal: 5,
-    alignItems: "center",
-    fontSize: 20,
+    ...baseButton,
     backgroundColor: "white",
-    flex: 1,
   },
   buttonGroup: {
     flexDirection: "row",
