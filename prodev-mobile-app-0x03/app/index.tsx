@@ -1,14 +1,8 @@
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
+import { StyleSheet } from "react-native";
+import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function Index() {
   const [email, setEmail] = useState("");
