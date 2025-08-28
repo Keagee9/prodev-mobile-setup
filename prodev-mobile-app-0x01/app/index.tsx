@@ -4,18 +4,9 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Entry Screen - Awesome</Text>
-        <Text style={styles.largeText}>Typescript is great if you practice more</Text>
-        <Text style={[styles.baseText, styles.mediumText]}>React Native provides you a single codebase for cross platforms</Text>
-        <Text style={[styles.baseText, styles.smallText]}>ALX is awesome</Text>
-        <Text style={[styles.baseText, styles.newText]}>Expo Router simplifies navigation!</Text>
-        <Text style={[styles.baseText, styles.extraText1]}>Expo Go is a great tool for development.</Text>
-        <Text style={[styles.baseText, styles.extraText2]}>EAS makes building and submitting apps easy.</Text>
-        <Text style={[styles.baseText, styles.extraText3]}>React Native is a powerful framework.</Text>
-        <Text style={[styles.baseText, styles.finalText, styles.finalText1]}>Keep learning and building.</Text>
-        <Text style={[styles.baseText, styles.finalText, styles.finalText2]}>Practice makes perfect.</Text>
-        <Text style={[styles.baseText, styles.finalText, styles.finalText3]}>Enjoy the journey!</Text>
+              ["<Text style={styles.largeText}>Typescript is great if you practice more</Text>\r\n  <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>\r\n  <Text style={styles.smallText}>ALX is awesome</Text>"]
       </View>
+
     </View>
   );
 }
