@@ -3,6 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Index() {
   return (
     <View style={styles.container}>
+        <Text style={styles.largeText}>Typescript is great if you practice more</Text>
+      <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>
+      <Text style={styles.smallText}>ALX is awesome</Text>
       <View style={styles.content}>
         <Text style={styles.title}>Entry Screen - Awesome</Text>
         <Text style={styles.largeText}>Typescript is great if you practice more</Text>
@@ -15,9 +18,7 @@ export default function Index() {
         <Text style={[styles.baseText, styles.finalText, styles.finalText1]}>Keep learning and building.</Text>
         <Text style={[styles.baseText, styles.finalText, styles.finalText2]}>Practice makes perfect.</Text>
         <Text style={[styles.baseText, styles.finalText, styles.finalText3]}>Enjoy the journey!</Text>
-      <Text style={styles.largeText}>Typescript is great if you practice more</Text>
-      <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>
-      <Text style={styles.smallText}>ALX is awesome</Text>
+    
       </View>
 
     </View>
