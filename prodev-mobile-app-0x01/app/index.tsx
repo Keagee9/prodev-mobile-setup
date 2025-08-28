@@ -3,14 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Index() {
   return (
     <View style={styles.container}>
-        <Text style={styles.largeText}>Typescript is great if you practice more</Text>
-      <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>
-      <Text style={styles.smallText}>ALX is awesome</Text>
       <View style={styles.content}>
         <Text style={styles.title}>Entry Screen - Awesome</Text>
         <Text style={styles.largeText}>Typescript is great if you practice more</Text>
-        <Text style={[styles.baseText, styles.mediumText]}>React Native provides you a single codebase for cross platforms</Text>
-        <Text style={[styles.baseText, styles.smallText]}>ALX is awesome</Text>
+        <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>
+        <Text style={styles.smallText}>ALX is awesome</Text>
         <Text style={[styles.baseText, styles.newText]}>Expo Router simplifies navigation!</Text>
         <Text style={[styles.baseText, styles.extraText1]}>Expo Go is a great tool for development.</Text>
         <Text style={[styles.baseText, styles.extraText2]}>EAS makes building and submitting apps easy.</Text>
@@ -61,11 +58,15 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: "#9c27b0",
     fontWeight: "500",
+    textAlign: "center",
+    marginBottom: 12,
   },
   smallText: {
     fontSize: 15,
     color: "#2196f3",
     fontWeight: "400",
+    textAlign: "center",
+    marginBottom: 12,
   },
   newText: {
     fontSize: 18,
