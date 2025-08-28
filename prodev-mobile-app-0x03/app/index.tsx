@@ -1,12 +1,44 @@
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
-import { Text, TextInput, View, TouchableOpacity, Image } from "react-native";
-import { StyleSheet } from "react-native";
+import {
+  Alert,
+  Image,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function Index() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleSignIn = () => {
+    // Basic validation
+    if (!email || !password) {
+      Alert.alert("Error", "Please enter both email and password.");
+      return;
+    }
+    // Handle sign in logic here
+    console.log("Signing in with:", { email, password });
+    Alert.alert("Success", "Signed in successfully!");
+  };
+
+  const handleSocialLogin = (provider: string) => {
+    // Handle social login logic here
+    console.log(`Continue with ${provider}`);
+    Alert.alert("Info", `Signing in with ${provider} is not implemented yet.`);
+  };
+
+  const handleForgotPassword = () => {
+    Alert.alert("Info", "Forgot Password functionality not implemented yet.");
+  };
+
+  const handleSignUp = () => {
+    Alert.alert("Info", "Sign Up functionality not implemented yet.");
+  };
 
   return (
     <SafeAreaProvider>
@@ -26,6 +58,7 @@ export default function Index() {
               onChangeText={setEmail}
               keyboardType="email-address"
               autoCapitalize="none"
+              autoComplete="email"
             />
           </View>
 
@@ -37,20 +70,24 @@ export default function Index() {
               value={password}
               onChangeText={setPassword}
               secureTextEntry
+              autoComplete="password"
             />
           </View>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handleForgotPassword}>
             <Text style={styles.forgotPassword}>Forgot Password?</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.signInButton}>
+          <TouchableOpacity style={styles.signInButton} onPress={handleSignIn}>
             <Text style={styles.signInButtonText}>Sign In</Text>
           </TouchableOpacity>
 
           <Text style={styles.orText}>OR</Text>
 
-          <TouchableOpacity style={styles.socialButton}>
+          <TouchableOpacity
+            style={styles.socialButton}
+            onPress={() => handleSocialLogin("Google")}
+          >
             <Image
               source={require("@/assets/images/google.png")}
               style={styles.socialIcon}
@@ -58,14 +95,19 @@ export default function Index() {
             <Text style={styles.socialButtonText}>Continue with Google</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.socialButton}>
+          <TouchableOpacity
+            style={styles.socialButton}
+            onPress={() => handleSocialLogin("Facebook")}
+          >
             <FontAwesome name="facebook-square" size={24} color="#3b5998" />
             <Text style={styles.socialButtonText}>Continue with Facebook</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.signUpContainer}>
-            <Text style={styles.signUpText}>Don't have an account? </Text>
-            <Text style={[styles.signUpText, styles.signUpLink]}>Sign Up</Text>
+          <TouchableOpacity style={styles.signUpContainer} onPress={handleSignUp}>
+            <Text style={styles.signUpText}>
+              Don't have an account?{" "}
+              <Text style={styles.signUpLink}>Sign Up</Text>
+            </Text>
           </TouchableOpacity>
         </View>
       </SafeAreaView>
@@ -152,7 +194,6 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   signUpContainer: {
-    flexDirection: "row",
     marginTop: 20,
   },
   signUpText: {
@@ -162,5 +203,4 @@ const styles = StyleSheet.create({
     color: "#007BFF",
     fontWeight: "bold",
   },
-
 });
