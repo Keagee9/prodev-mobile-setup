@@ -15,7 +15,9 @@ export default function Index() {
         <Text style={[styles.baseText, styles.finalText, styles.finalText1]}>Keep learning and building.</Text>
         <Text style={[styles.baseText, styles.finalText, styles.finalText2]}>Practice makes perfect.</Text>
         <Text style={[styles.baseText, styles.finalText, styles.finalText3]}>Enjoy the journey!</Text>
-      <Text style={styles.largeText}>Typescript is great if you practice more</Text>\r\n  <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>\r\n  <Text style={styles.smallText}>ALX is awesome</Text>
+      <Text style={styles.largeText}>Typescript is great if you practice more</Text>
+      <Text style={styles.mediumText}>React Native provides you a single codebase for cross platforms</Text>
+      <Text style={styles.smallText}>ALX is awesome</Text>
       </View>
 
     </View>
